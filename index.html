@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RNK Store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>RNK Store</h1>
+  <input type="text" id="search" placeholder="Search products...">
+  <div class="cart-icon" onclick="toggleCart()">🛒 (<span id="cart-count">0</span>)</div>
+</header>
+
+<!-- CATEGORY BUTTONS -->
+<div class="categories">
+  <button onclick="filterCategory('all')">All</button>
+  <button onclick="filterCategory('ration')">Ration</button>
+  <button onclick="filterCategory('stationery')">Stationery</button>
+  <button onclick="filterCategory('snacks')">Snacks</button>
+</div>
+
+<!-- PRODUCTS -->
+<div id="products"></div>
+
+<!-- CART -->
+<div id="cart" class="cart hidden">
+  <h2>Carry Bag</h2>
+  <ul id="cart-items"></ul>
+  <button onclick="placeOrder()">Order on WhatsApp</button>
+</div>
+
+<!-- OTP LOGIN UI -->
+<div class="otp-box">
+  <h3>Login</h3>
+  <input type="text" placeholder="Enter Phone Number">
+  <button onclick="alert('OTP Sent (Demo)')">Send OTP</button>
+  <input type="text" placeholder="Enter OTP">
+  <button onclick="alert('Logged in (Demo)')">Verify</button>
+</div>
+
+<!-- MAP + TRACKING -->
+<div class="map-box">
+  <h3>Delivery Tracking</h3>
+  <iframe src="https://maps.google.com/maps?q=patna&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+  <p>Status: Out for delivery 🚚</p>
+</div>
+
+<footer>
+  <p>Contact: 7484820713</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
